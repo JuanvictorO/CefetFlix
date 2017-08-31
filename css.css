@@ -1,0 +1,163 @@
+body{
+	background-color: black;
+}
+main{
+	border-style: solid;
+	border-width: 5px;
+	border-color: grey;
+	background-color: rgb(169,169,169);
+	width: 90vw;
+	height: 1250px;
+	margin: 0 auto;
+}
+#logo{
+	margin: 0;
+	z-index: 0;
+	margin: 0;
+	width:98.3vw;
+	position: relative;
+}
+footer{
+	margin-top: 60px;
+	padding: 0.2px 0 1px 0;
+	background-color: white;
+	text-align: center;
+	-webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+}
+
+footer:hover {
+	background-color: black;
+	color: white;
+}
+footer:active{
+	background-color: red;
+}
+footer span{
+	margin-left: 140px;
+}
+header h1{
+	font-size: 5vw;
+	margin-top: 200px;
+	margin-left: 330px;
+	position: absolute;
+	top: 0;
+	text-shadow: 3.5px 3.5px red;
+}
+header span{
+	color: red;
+	text-shadow: 3.5px 3.5px black;
+}
+.catalogo{
+	width: 1200px;
+	height: 1100px;
+	margin: 0 auto;
+	
+}
+.catalogo h1{
+	color: white;
+	text-align: center;
+	border-bottom: 2px;
+	border-top: 0;
+	border-left:0;
+	border-right:0;
+	border-color: white;
+	border-style: solid;
+}
+ .tudo{
+	position: relative;
+	display: inline-block;
+	margin: 20px 50px;
+}
+.tudo:hover .news {
+	transition: 2s;
+	display: block;
+	
+}
+.star{
+	color: yellow;
+}
+#d3, #d6, #d9, #d12, #d15{
+ 	left: -300px;
+}
+
+
+.news{
+	background-color: rgb(0,0,0);
+	opacity: 0.9;
+	border-width: 1px;
+	border-color: white;
+	border-style: solid;
+	padding-top: 8px;
+	display: none;
+	position: absolute;
+	width: 300px;
+	height: auto;
+	z-index: 1;
+	left: 292px;
+	bottom: -160px;
+	transition: 2s;
+	text-align: center;
+	color: #D3D3D3;
+}
+.news:hover{
+	border-color: red;
+	border-color-bottom: #CC0000;
+	color: black;
+	background-color: #D3D3D3;
+
+}
+.news p{
+	margin: 5px 0;
+	display: block;
+}
+.news h3{
+	margin: 5px 15px;
+}
+
+
+
+
+
+.movie{
+	float: left;
+	position: relative;
+	width: 290px;
+
+}
+.imagens{;
+	height: 150px;
+	width: 280px;
+	border-color: red;
+	border-width: 5px;
+	border-style: solid;
+}
+
+.titulo{
+	position: absolute;
+	margin: 0;
+	width: 290px;
+	line-height: 160px;
+	top: 0;
+	text-align: center;
+	opacity: 0;
+	color: #fff; 
+}
+.titulo:hover {
+	opacity: 1;
+	background-color: rgba(0,0,0,0.7);
+	transition: 2s;
+}
+
+.movie:hover img{
+	border-color: #000;
+	transition: 2s;
+}
+
+.age{
+	width: 30px;
+	height: 30px;
+}
+.i{
+	color: yellow;
+}

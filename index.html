@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<style>
+
+
+</style>
+<link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css"/>
+<link rel="stylesheet" type="text/css" href="css.css"/>
+<script src="js/filmes.js"></script>
+<script src="./js/jquery.min.js"></script>
+<script>
+	$(function(){
+		$.each(filmes, function(i, filme){
+			$Dop = $("<ul />");	
+			$.each(filme.opinioes, function(ind,obj){
+				for(var ind = 1; ind<= obj.rating; ind++){
+						$Dop.append($("<i />")
+							.addClass("fa fa-star star")
+						)
+
+				}
+				$Dop
+					.append("<h3 />").text(obj.descricao)
+			});
+
+
+			if(filme.classificacao==0){
+					var gg = "./img/cl.jpg";
+				}
+				else if(filme.classificacao==10){
+					var gg = "./img/c10.jpg";
+				}
+				else if(filme.classificacao==12){
+					var gg = "./img/c12.jpg";
+				}
+				else if(filme.classificacao==14){
+					var gg = "./img/c14.jpg";
+				}
+				else if(filme.classificacao==16){
+					var gg = "./img/c16.jpg";
+				}
+				else if(filme.classificacao==18){
+					var gg = "./img/c18.jpg";
+				}
+			$(".catalogo").append($("<div />").addClass("tudo")
+				.append($("<div />")
+				.addClass("movie")
+
+
+				.append($("<img />")
+					.addClass("imagens")
+					.attr("src", filme.figura)
+				)
+				
+				.append($("<h1 />")
+					.addClass("titulo")
+					.text(filme.titulo)
+				)
+			)
+
+				
+
+			.append($("<section />").addClass("news").attr("id","d"+filme.id)
+
+					.append($("<h3 />")
+					.text("Resumo:")
+				)
+				.append($("<p />")
+					.text(filme.resumo)
+				)
+				.append($("<h3 />")
+					.text("Generos:")
+				)
+				.append($("<p />").text(filme.generos)
+				)
+				.append($("<h3 />")
+					.text("Classificação:")
+				)
+				.append($("<img />").attr("src",gg).addClass("age")
+				)
+				.append($("<h3 />")
+					.text("Elenco:")
+				)
+				.append($("<p />").text(filme.elenco)
+				)
+				.append($("<div />").addClass("opiniao")
+					.html("Opiniões:")
+				)
+				.append($Dop).text(filme.rating)
+				))
+				
+				$.each(filme.titulosSemelhantes,function(indice,juan){
+					$("#d"+filme.id).append($("<p />").text(filmes[juan-1].titulo))
+				});
+				
+			
+		});
+
+
+
+		});
+
+	
+</script>
+</head>
+<body>
+<header>
+	<img id="logo" src="./img/battle.jpg"/>
+	<h1 id="logoo">CEFET<span>FLIX</span></h1>
+</header>
+<main>
+	<div class="catalogo">
+		<h1>POPULARES:</h1>
+	</div>
+<footer>
+	<h2>Juan Victor Oliveira Silva<span class="h3">Turma 2B</span><span class="h3">2017</span></h2>
+</footer>
+</main>
+</body>
+</html>
+<!--       //https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown_hover    ->
