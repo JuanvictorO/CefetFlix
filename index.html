@@ -13,16 +13,17 @@
 <script>
 	$(function(){
 		$.each(filmes, function(i, filme){
-			$Dop = $("<ul />");	
+			$Dop = $("<div />");	
 			$.each(filme.opinioes, function(ind,obj){
 				for(var ind = 1; ind<= obj.rating; ind++){
-						$Dop.append($("<i />")
-							.addClass("fa fa-star star")
+						$Dop
+							.append($("<i />")
+								.addClass("fa fa-star star")
 						)
 
 				}
 				$Dop
-					.append("<h3 />").text(obj.descricao)
+					.append($("<p />").text(obj.descricao).addClass("descricao"))
 			});
 
 
@@ -85,16 +86,24 @@
 				)
 				.append($("<p />").text(filme.elenco)
 				)
-				.append($("<div />").addClass("opiniao")
+				.append($("<h3 />").addClass("opiniao")
 					.html("Opiniões:")
 				)
-				.append($Dop).text(filme.rating)
+				.append($Dop).addClass("list")
 				))
+
+			
+				if(filmes.titulo== ""){
+
+					}
+				else{
+					$("#d"+filme.id).append($("<h3 />").text("Títulos Semelhantes:"))
+
 				
 				$.each(filme.titulosSemelhantes,function(indice,juan){
-					$("#d"+filme.id).append($("<p />").text(filmes[juan-1].titulo))
+						$("#d"+filme.id).append($("<p />").text(filmes[juan-1].titulo))
 				});
-				
+				}
 			
 		});
 
